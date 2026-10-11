@@ -1,0 +1,29 @@
+# Ren'Py specific
+*.rpyc
+*.rpymc
+*.pyc
+__pycache__/
+game/saves/
+game/cache/
+game/bytecode.rpyb
+game/bytecode.rpyb.tmp
+game/*.rpyb
+log.txt
+errors.txt
+traceback.txt
+saves/
+cache/
+
+# Build output
+/dist/
+build/
+*.zip
+*.tar.bz2
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
