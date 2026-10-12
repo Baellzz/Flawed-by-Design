@@ -1,3 +1,5 @@
+<img width="1280" height="1229" alt="38abf3ef-30f0-4e77-92f5-b4b8ab822c67" src="https://github.com/user-attachments/assets/4bbce26e-634b-4d6e-8e9f-26ed6483708d" />
+
 # Flawed by Design
 
 Визуальная новелла на Ren'Py.
