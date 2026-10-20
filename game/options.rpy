@@ -12,7 +12,7 @@
 ##
 ## Символы "_()", окружающие название, отмечают его как пригодное для перевода.
 
-define config.name = _("School_V1")
+define config.name = _("Flawed by Design")
 
 
 ## Определяет, показывать ли заголовок, данный выше, на экране главного меню.
@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## постройке дистрибутивов. Оно должно содержать текст формата ASCII и не должно
 ## содержать пробелы, двоеточия и точки с запятой.
 
-define build.name = "School_V1"
+define build.name = "FlawedbyDesign"
 
 
 ## Звуки и музыка ##############################################################
@@ -70,6 +70,9 @@ define config.has_voice = True
 ## Эти переменные задают переходы, используемые в различных событиях. Каждая
 ## переменная должна задавать переход или None, чтобы указать на то, что переход
 ## не должен использоваться.
+
+## Включаем переходы по умолчанию для всех новых игроков
+default preferences.transitions = True
 
 ## Вход и выход в игровое меню.
 
@@ -121,13 +124,19 @@ define config.window_hide_transition = Dissolve(.2)
 ## в то время как любая другая цифра — это количество символов, печатаемых в
 ## секунду.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 40
 
 
 ## Стандартная задержка авточтения. Большие значения означают долгие ожидания, а
 ## от 0 до 30 — вполне допустимый диапазон.
 
-default preferences.afm_time = 15
+default preferences.afm_time = 3
+
+## Авто-режим не отключается при клике мыши
+default preferences.afm_after_click = True
+
+## Задержка авто-режима (3 секунды)
+default preferences.afm_time = 3
 
 
 ## Директория сохранений #######################################################
@@ -233,5 +242,8 @@ default preferences.audio_when_minimized = True
 
 ## --- Рендерер ---
 ## Принудительно используем ANGLE2 (помогает с мерцанием на Windows).
-default preferences.renderer = "angle2"
+#default preferences.renderer = "angle2"
 define config.gl2 = True
+
+## Принудительная очистка экрана (фундаментальное решение)
+define config.gl_clear_color = "#000000"
