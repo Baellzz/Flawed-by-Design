@@ -31,7 +31,6 @@ style invisible_button is button:
 screen preferences():
     tag menu
     
-    # ВОТ ОНА, МАГИЯ ESC! Возвращает в предыдущее меню (Главное или Игровое)
     key "K_ESCAPE" action Return()
     
     # Переменные для наведения на слайдеры
@@ -42,7 +41,6 @@ screen preferences():
     add "images/menu/Options/background_options.png":
         xysize (1920, 1080)
 
-    # Кнопка "Назад" (на всякий случай оставляем её на экране)
     imagebutton:
         idle "images/menu/gallery/back_gallery.png"
         hover "images/menu/gallery/back_gallery.png"
