@@ -106,24 +106,28 @@ screen quick_menu():
             xpos 40
             ypos 30
             spacing 25
-
-            textbutton "⚙":
-                action ShowMenu()
-                text_size 35
-                text_color "#ffffff"
-                text_hover_color "#ffb3c6"
+            # Кнопка настроек
             
-            textbutton "👁":
-                action SetVariable("hide_ui", True)
-                text_size 35
-                text_color "#ffffff"
-                text_hover_color "#ffb3c6"
+            # Кнопка настроек
+            imagebutton:
+                idle Transform("gui/quick/settings_idle.png", zoom=0.05)
+                hover Transform("gui/quick/settings_hover.png", zoom=0.05)
+                action ShowMenu()
 
+            # Кнопка скрытия интерфейса
+            imagebutton:
+                idle Transform("gui/quick/eye_idle.png", zoom=0.05)
+                hover Transform("gui/quick/eye_hover.png", zoom=0.05)
+                action SetVariable("hide_ui", True)
+
+
+            # Кнопка истории диалогов
             textbutton "LOG":
                 action Show("custom_history")
                 text_size 24
                 text_color "#ffffff"
                 text_hover_color "#ffb3c6"
+
 
         hbox:
             xalign 0.98
